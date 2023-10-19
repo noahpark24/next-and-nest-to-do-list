@@ -1,0 +1,30 @@
+instalar cli de nest.js
+
+npm install -g @nestjs/cli
+
+escribiento nest en la terminal se ven los comandos del cli de nest
+
+nest g <tipo_de_archivo> <nombre_del_archivo> --no-spec : Crea algo sin crearle su archivo de testing  
+
+antes de crear controller , services o tests , se debe crear un modulo
+
+npm run start:dev : Inicia el servidor de desarrollo que funciona igual que node.js con nodemon
+
+Entidades : Detallan como luce un dato , funcionan igual que las interfaces de typescript , no es requerido pero es muy recomendable tenerlos
+
+v4 de uuid sirve para generar ids aleatorios
+
+Data Transfer Object(dto) : Detalla los datos que se espera que lleguen como body o params a cada peticion
+
+//VALIDACIONES
+npm i --save class-validator class transformer : Sirve para instalar las dependencias que usa nest para validaciones
+
+app.useGlobalPipes(new ValidationPipe()); : Para usar las validaciones se debe agregar esta linea a main.ts
+
+//SEQUELIZE
+Para usar sequelize con nest.js entrar aqui : https://docs.nestjs.com/techniques/database#sequelize-integration
+
+no olvidarse de instalar pg , en dialect en lugar de mysql se pone postgres
+
+EL PUERTO DE LA DB NO DEBE SER EL MISMO QUE EL DE MAIN.TS
+
