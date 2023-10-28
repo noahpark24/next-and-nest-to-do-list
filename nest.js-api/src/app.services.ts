@@ -10,15 +10,15 @@ export class ResponsesService {
   }
 
   sendAllTasks(@Res() res: Response, tasks: any, statusCode?: number) {
-    console.log('soy el type de getAllTasks : ', typeof tasks);
     return res.status(statusCode || 200).send({
       tasks,
     });
   }
 
-  error(@Res() res: Response, message: string | unknown, statusCode?: number) {
+  error(@Res() res: Response, error: Error | string, statusCode?: number) {
+    const errorMessage = error instanceof Error ? error.message : String(error);
     return res.status(statusCode || 500).send({
-      error: message,
+      error: errorMessage,
     });
   }
 }

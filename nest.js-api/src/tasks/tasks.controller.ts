@@ -14,11 +14,7 @@ import { Response } from 'express';
 import { TasksService } from './tasks.service';
 import { ResponsesService } from 'src/app.services';
 //Data Transfer Objects
-import {
-  CreateTaskDto,
-  UpdateTaskDto,
-  UpdateTaskStatusDto,
-} from './dto/task.dto';
+import { CreateTaskDto, UpdateTaskDto } from './dto/task.dto';
 
 @Controller('tasks')
 export class TasksController {
@@ -78,7 +74,7 @@ export class TasksController {
   async updateTaskStatus(
     @Res() res: Response,
     @Param('id') id: string,
-    @Body() newStatus: UpdateTaskStatusDto,
+    @Body() newStatus: any,
   ) {
     try {
       await this.taskServices.updateTask(id, newStatus);

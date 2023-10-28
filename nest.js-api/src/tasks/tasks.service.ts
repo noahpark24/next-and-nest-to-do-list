@@ -3,13 +3,13 @@ import { InjectModel } from '@nestjs/sequelize';
 //Models
 import { TasksModel } from './tasks.model';
 //DatA Transfer Objects
-import { UpdateTaskDto, UpdateTaskStatusDto } from './dto/task.dto';
+import { UpdateTaskDto } from './dto/task.dto';
 
 @Injectable()
 export class TasksService {
   constructor(
     @InjectModel(TasksModel)
-    private taskModel: typeof TasksModel,
+    public taskModel: typeof TasksModel,
   ) {}
 
   async getAllTasks() {

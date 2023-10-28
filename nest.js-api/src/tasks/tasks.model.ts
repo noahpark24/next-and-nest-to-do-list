@@ -10,11 +10,14 @@ export class TasksModel extends Model {
     defaultValue: uuidv4,
     primaryKey: true,
     allowNull: false,
+    unique: true,
   })
   id: string;
 
   @Column({
     type: DataType.STRING,
+    allowNull: false,
+    unique: true,
   })
   title: string;
 
