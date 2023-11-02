@@ -8,7 +8,7 @@ Mono Repo For My Practice Project with next.js and nest.js
  - 
 ## Technologies Stack
 
-● Back End: Nest.js +  PostgreSql + typescript
+● Back End: Nest.js +  PostgreSql + typescript + jest
 
 ● Front End: Next.js + typescript + tailwind
 
