@@ -44,30 +44,36 @@ const List = () => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    <div className="container mx-auto">
+    <div className="flex  items-center justify-center mx-auto">
       <div className="list-wrapper">
         {/*List Header*/}
-        <div className="header">
+        <div className="header text-center mb-4 rounded-md text-white font-bold text-2xl p-2">
           <h1>Nest and Next To Do list</h1>
         </div>
 
         {/*Filter Buttons*/}
-        <div className="filter-buttons">
+        <div className="flex justify-center mb-4">
           <button
             onClick={() => filterTasks('ALL')}
-            className={`filter-button ${filter === 'ALL' ? 'all' : ''}`}
+            className={`filter-button text-base mr-3 p-2 px-4 focus:outline-none rounded-md ${
+              filter === 'ALL' ? 'all text-white bg-blue-600' : ''
+            }`}
           >
             All
           </button>
           <button
             onClick={() => filterTasks('PENDING')}
-            className={`filter-button ${filter === 'PENDING' ? 'pending' : ''}`}
+            className={`filter-button ${
+              filter === 'PENDING' ? 'pending text-white bg-blue-600' : ''
+            }`}
           >
             Pending
           </button>
           <button
             onClick={() => filterTasks('DONE')}
-            className={`filter-button ${filter === 'DONE' ? 'complete' : ''}`}
+            className={`filter-button ${
+              filter === 'DONE' ? 'complete text-white bg-blue-600' : ''
+            }`}
           >
             Complete
           </button>

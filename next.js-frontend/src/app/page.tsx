@@ -6,7 +6,7 @@ export default function Home() {
       <div className="py-12">
         <AddTask />
       </div>
-      <div className="pt-6">
+      <div className="pb-6">
         <List />
       </div>
     </>
