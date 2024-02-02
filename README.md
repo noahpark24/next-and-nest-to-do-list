@@ -1,7 +1,6 @@
 # Next.JS-And-Nest.JS-To-Do-List
 Mono Repo For My Practice Project with next.js and nest.js
 
- - 
 ## Technologies Stack
 
 ● Back End: Nest.js +  PostgreSql + typescript + jest
