@@ -8,6 +8,14 @@ nest g <tipo_de_archivo> <nombre_del_archivo> --no-spec : Crea algo sin crearle 
 
 antes de crear controller , services o tests , se debe crear un modulo
 
+Pasos para crear contenido para el servidor :
+1 - Crear modulo , < nest generate module Tasks>
+2 - Crear modelo , < nest generate class Tasks/Task-model>
+3 - Crear controladores , <nest generate controller Tasks/Task-controllers>
+4 - Crear services , <nest generate service Tasks/task-services>
+
+Cors : El cors se usa en main.ts
+
 npm run start:dev : Inicia el servidor de desarrollo que funciona igual que node.js con nodemon
 
 Entidades : Detallan como luce un dato , funcionan igual que las interfaces de typescript , no es requerido pero es muy recomendable tenerlos
